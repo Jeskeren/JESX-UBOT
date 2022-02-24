@@ -186,7 +186,7 @@ DEVS = (
     1977874449,
 )
 
-# Blacklist User for use RAM-UBOT
+# Blacklist User for use JES-UBOT
 while 0 < 6:
     _BLACKLIST = get(
         "https://raw.githubusercontent.com/ramadhani892/Ramblack/master/ramblacklist.json"
@@ -218,7 +218,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "RAM-UBOT")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "JES-UBOT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "7.0")
@@ -414,7 +414,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**⭐RAM-UBOT⭐ v{BOT_VER} Sedang berjalan!**\n\n"
+        f"**⭐JES-UBOT⭐ v{BOT_VER} Sedang berjalan!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -507,11 +507,11 @@ with bot:
         async def handler(event):
             await event.message.get_sender()
             text = (
-                f"**Hey**, __I am using__  **⭐RAM-UBOT⭐** \n\n"
+                f"**Hey**, __I am using__  **⭐JES-UBOT⭐** \n\n"
                 f"       __Thanks For Using me__\n\n"
                 f"✨ **Group Support :** [GEEZ](t.me/Geezsupport)\n"
                 f"✨ **Owner Repo :** [LANDAK](t.me/GeezProjectt)\n"
-                f"✨ **Repo :** [RAM-UBOT](https://github.com/ramadhani892/RAM-BOT)\n"
+                f"✨ **Repo :** [JES-UBOT](https://github.com/Jeskeren/JES-UBOT)\n"
             )
             await tgbot.send_file(
                 event.chat_id,
@@ -520,8 +520,8 @@ with bot:
                 buttons=[
                     [
                         custom.Button.url(
-                            text="✨ REPO RAM-UBOT ✨",
-                            url="https://github.com/ramadhani892/RAM-UBOT",
+                            text="✨ REPO JES-UBOT ✨",
+                            url="https://github.com/Jeskeren/JES-UBOT",
                         )
                     ],
                     [
@@ -545,20 +545,20 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"**✨ inline RAM-UBOT ✨**\n\n⭐ **Owner** [LANDAK](t.me/maafgausahsokap)\n✨ **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**✨ inline JES-UBOT ✨**\n\n⭐ **Owner** [JESS](t.me/maafgausahsokap)\n✨ **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository ✨RAM-UBOT✨",
+                    description="Repository ✨JES-UBOT✨",
                     url="https://t.me/geezsupport",
-                    text="**⭐RAM-UBOT⭐**\n➖➖➖➖➖➖➖➖➖➖\n✨ **Owner :** [RAMA](https://t.me/teervigroup)\n✨ **Support :** @geezsupport\n✨ **Repository :** [⭐RAM-UBOT⭐](https://github.com/ramadhani892/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**⭐JES-UBOT⭐**\n➖➖➖➖➖➖➖➖➖➖\n✨ **Owner :** [JESS](https://t.me/teervigroup)\n✨ **Support :** @geezsupport\n✨ **Repository :** [⭐JES-UBOT⭐](https://github.com/Jeskeren/JES-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/geezsupport"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/ramadhani892/RAM-UBOT"
+                                "ʀᴇᴘᴏ", "https://github.com/Jeskeren/JES-UBOT"
                             ),
                         ],
                     ],
@@ -566,15 +566,15 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="⭐ RAM-UBOT ⭐",
-                    description="RAM-UBOT | Telethon",
+                    title="⭐ JES-UBOT ⭐",
+                    description="JES-UBOT | Telethon",
                     url="https://t.me/geezsupport",
-                    text=f"**RAM-UBOT**\n➖➖➖➖➖➖➖➖➖➖\n✨ **OWNER:** [LANDAK](t.me/maafgausahsokap)\n✨ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @userbotchannel\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**JES-UBOT**\n➖➖➖➖➖➖➖➖➖➖\n✨ **OWNER:** [JESS](t.me/Gigsdlu)\n✨ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @userbotchannel\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/geezprojectt"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/ramadhani892/RAM-UBOT"
+                                "ʀᴇᴘᴏ", "https://github.com/Jeskeren/JES-UBOT"
                             ),
                         ],
                     ],
@@ -608,27 +608,27 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"⭐RAM-UBOT⭐\n\n✨**Owner : [RAMA](t.me/teervigroup)**\n\n✨ **Bot Ver :** `8.0`\n✨ **𝗠odules :** `{len(dugmeler)}`",
+                    text=f"⭐JES-UBOT⭐\n\n✨**Owner : [JESS](t.me/teervigroup)**\n\n✨ **Bot Ver :** `8.0`\n✨ **𝗠odules :** `{len(dugmeler)}`",
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⭐RAM-UBOT⭐ ",
+                    "Bantuan Dari ⭐JES-UBOT⭐ ",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ⭐RAM-UBOT⭐ ",
-                    text="""**⭐RAM-UBOT⭐\n\n Anda Bisa Membuat Geez Userbot Anda Sendiri Dengan Cara:** __TEKEN DIBAWAH INI!__ 👇""",
+                    " ⭐JES-UBOT⭐ ",
+                    text="""**⭐JES-UBOT⭐\n\n Anda Bisa Membuat Geez Userbot Anda Sendiri Dengan Cara:** __TEKEN DIBAWAH INI!__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "⭐RAM-UBOT⭐",
-                                "https://github.com/ramadhani892/RAM-UBOT"),
+                                "⭐JES-UBOT⭐",
+                                "https://github.com/Jeskeren/JES-UBOT"),
                             custom.Button.url(
                                 "OWNER",
-                                "t.me/teervigroup")]],
+                                "t.me/kisahjes")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
