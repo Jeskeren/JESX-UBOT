@@ -1,4 +1,4 @@
-FROM ramadhani892/ramutod:slim-buster
+FROM Jeskeren/ramutod:slim-buster
 
 RUN git clone -b JESX-UBOT https://github.com/Jeskeren/JESX-UBOT /root/userbot
 RUN mkdir /root/userbot/.bin
